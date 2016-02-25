@@ -28,7 +28,7 @@ class Headers {
     else if (typeof init === "object")
       _.each(init, (value, name)=> {
         this.append(name, value);
-      });
+      }.bind(this));
   }
 
   append(name, value) {
